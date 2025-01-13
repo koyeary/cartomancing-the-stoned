@@ -1,0 +1,47 @@
+{
+  "name": "cartomancing-the-stoned",
+  "version": "1.0.0",
+  "description": "A multi-purppose deck of cards",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koyeary/cartomancing-the-stoned.git"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "@nivo/bar": "^0.87.0",
+    "@nivo/boxplot": "^0.87.0",
+    "@nivo/core": "^0.87.0",
+    "@nivo/line": "^0.87.0",
+    "@nivo/pie": "^0.87.0",
+    "@nivo/tree": "^0.87.0",
+    "axios": "^1.7.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.2.1",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "20.11.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "author": "Kat Yeary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koyeary/cartomancing-the-stoned/issues"
+  },
+  "homepage": "https://github.com/koyeary/cartomancing-the-stoned#readme"
+}
